@@ -171,7 +171,7 @@ mvn clean install
 
 All being well the code should run compile (I built using commit `9c31ad52f6995e1af9dd75f4668d67ee2f3d04cb`, Sept 2015):
 
-image::010-isis-script-repo-mvn-clean-install-completed.png[link="010-isis-script-repo-mvn-clean-install-completed.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/010-isis-script-repo-mvn-clean-install-completed.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/010-isis-script-repo-mvn-clean-install-completed.png"]
 
 
 [NOTE]
