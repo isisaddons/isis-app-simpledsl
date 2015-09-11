@@ -40,9 +40,6 @@ entity SimpleObject {
 	@Property(editing = Editing.DISABLED)
 	property String name
 
-	@Property(optionality=OPTIONAL)
-	property Integer count
-	
 	@Action(domainEvent = UpdateNameDomainEvent)
 	action SimpleObject updateName {
 		@Parameter(maxLength = 40)
