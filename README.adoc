@@ -169,17 +169,28 @@ git checkout develop
 mvn clean install
 ----
 
-Be aware: first time I did this took about an hour (albeit on a moderately slow network).  Thereafter it takes about 1 minute to recompile.
+All being well the code should run compile (I built using commit `9c31ad52f6995e1af9dd75f4668d67ee2f3d04cb`, Sept 2015):
+
+image::010-isis-script-repo-mvn-clean-install-completed.png[link="010-isis-script-repo-mvn-clean-install-completed.png"]
+
+
+[NOTE]
+====
+Do be aware, though: the first time I did this took about an hour (albeit on a moderately slow network).  Thereafter it takes about 1 minute to recompile.
+====
+
+
 
 
 === Install Eclipse Mars and plugins
 
-Download Eclipse (http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr[vanilla Java edition] will suffice)
+Download Eclipse (the http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/marsr[vanilla Java edition] will suffice).
 
 Then install plugins using `Help > Install Software`:
 
 * the isis-script plugin, at https://raw.githubusercontent.com/vaulttec/isis-script/updatesite/
 * the datanucleus plugin, at http://www.datanucleus.org/downloads/eclipse-update/
+
 
 
 === Download the simpleapp (this repo)
@@ -191,12 +202,97 @@ Clone this repo:
 git clone https://github.com/isisaddons/isis-app-simpledsl
 ----
 
+I also recommend you build this from the command line before importing into Eclipse:
+
+[source,bash]
+----
+mvn clean install
+----
+
+This should ensure that all the generated directories exist when we do the import.
+
+
 
 === Import into Eclipse
 
-Import the project into Eclipse using `File>Import`, then `Maven > Existing Maven Projects`.
+Import the project into Eclipse using `File>Import`:
+
+image::110-eclipse-file-import.png[link="110-eclipse-file-import.png"]
+
+then `Maven > Existing Maven Projects`:
+
+image::112-eclipse-import-maven-projects.png[link="112-eclipse-import-maven-projects.png"]
+
+then select the source:
+
+image::114-eclipse-select-source.png[link="114-eclipse-select-source.png"]
+
+when done the source code should be shown in the package explorer:
+
+image::120-eclipse-package-explorer.png[link="120-eclipse-package-explorer.png"]
+
+
+=== Source and Generated Files
+
+The source file is shown in an "Isis editor":
+ 
+image::130-eclipse-isis-source-file.png[link="130-eclipse-isis-source-file.png"]
+
+The editor's context menu can be used to navigate to the corresponding generated (Java) source:
+
+image::210-isis-source-file-context-menu.png[link="210-isis-source-file-context-menu.png"]
+
+The corresponding member is automatically highlighted:
+
+image::220-isis-generated-file.png[link="220-isis-generated-file.png"]
+
+And from the generated Java you can also navigate back to the source:
+
+image::230-isis-generated-file-context-menu.png[link="230-isis-generated-file-context-menu.png"]
+
+
+
+=== DataNucleus
 
 Next, configure DataNucleus plugin as per the instructions on the http://isis.apache.org/guides/cg.html#_cg_ide_eclipse[Apache Isis website]
+
+Note the `persistent-unit` name in the manifest:
+
+image::310-datanucleus-manifest.png[link="310-datanucleus-manifest.png"]
+
+Open up the `dom` project properties:
+
+image::320-datanucleus-project-properties.png[link="320-datanucleus-project-properties.png"]
+
+and specify this persistence unit for the enhancer plugin:
+
+image::330-datanucleus-enhancer.png[link="330-datanucleus-enhancer.png"]
+
+Finally, back on the `dom` project's context menu, enable auto-enhancement:
+
+image::340-datanucleus-auto-enhancement.png[link="340-datanucleus-auto-enhancement.png"]
+
+
+
+== Using the Editor
+
+Let's take a quick look at the features available in the editor.  To start with, the editor provides context sensitive intellisense:
+
+image::410-editor-intellisense.png[link="410-editor-intellisense.png"]
+
+There's also a quick outline view (`ctrl+O`), great for quick navigation:
+
+image::420-editor-quick-outline.png[link="420-editor-quick-outline.png"]
+
+The outline is also available as a view:
+
+image::430-editor-outline-view.png[link="430-editor-outline-view.png"]
+
+Finally, any syntax errors are shown as markers and also in the problem view:
+
+image::440-editor-error-markers.png[link="440-editor-error-markers.png"]
+
+
 
 
 == Running the app
@@ -204,6 +300,23 @@ Next, configure DataNucleus plugin as per the instructions on the http://isis.ap
 You should be able to run the app either from Eclipse IDE, or from the command line.
 
 To run within Eclipse, you'll find that the `webapp/ide/eclipse/launch` directory contains some `.launch` configurations.  These are set up to run Isis' `org.apache.isis.WebServer` (which bootstraps an embedded Jetty server).  
+
+You can run the app from the context menu of one of these `.launch` files:
+
+image::510-eclipse-run.png[link="510-eclipse-run.png"]
+
+and the console shows the app starting:
+
+image::520-eclipse-run-console.png[link="520-eclipse-run-console.png"]
+
+Browsing to http://localhost:8080/wicket should hit the sign-in page (login `sven/pass`):
+
+image::600-running-app.png[link="600-running-app.png"]
+
+and you can then use the app as normal:
+
+image::610-running-app-dashboard.png[link="610-running-app-dashboard.png"]
+
 
 You can also build and then from the command line.  To build:
 
@@ -225,3 +338,7 @@ or if you prefer a splash screen:
 ----
 mvn -P self-host antrun:run
 ----
+
+
+
+
