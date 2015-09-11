@@ -217,38 +217,38 @@ This should ensure that all the generated directories exist when we do the impor
 
 Import the project into Eclipse using `File>Import`:
 
-image::110-eclipse-file-import.png[link="110-eclipse-file-import.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/110-eclipse-file-import.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/110-eclipse-file-import.png"]
 
 then `Maven > Existing Maven Projects`:
 
-image::112-eclipse-import-maven-projects.png[link="112-eclipse-import-maven-projects.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/112-eclipse-import-maven-projects.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/112-eclipse-import-maven-projects.png"]
 
 then select the source:
 
-image::114-eclipse-select-source.png[link="114-eclipse-select-source.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/114-eclipse-select-source.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/114-eclipse-select-source.png"]
 
 when done the source code should be shown in the package explorer:
 
-image::120-eclipse-package-explorer.png[link="120-eclipse-package-explorer.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/120-eclipse-package-explorer.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/120-eclipse-package-explorer.png"]
 
 
 === Source and Generated Files
 
 The source file is shown in an "Isis editor":
  
-image::130-eclipse-isis-source-file.png[link="130-eclipse-isis-source-file.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/130-eclipse-isis-source-file.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/130-eclipse-isis-source-file.png"]
 
 The editor's context menu can be used to navigate to the corresponding generated (Java) source:
 
-image::210-isis-source-file-context-menu.png[link="210-isis-source-file-context-menu.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/210-isis-source-file-context-menu.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/210-isis-source-file-context-menu.png"]
 
 The corresponding member is automatically highlighted:
 
-image::220-isis-generated-file.png[link="220-isis-generated-file.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/220-isis-generated-file.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/220-isis-generated-file.png"]
 
 And from the generated Java you can also navigate back to the source:
 
-image::230-isis-generated-file-context-menu.png[link="230-isis-generated-file-context-menu.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/230-isis-generated-file-context-menu.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/230-isis-generated-file-context-menu.png"]
 
 
 
@@ -258,19 +258,19 @@ Next, configure DataNucleus plugin as per the instructions on the http://isis.ap
 
 Note the `persistent-unit` name in the manifest:
 
-image::310-datanucleus-manifest.png[link="310-datanucleus-manifest.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/310-datanucleus-manifest.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/310-datanucleus-manifest.png"]
 
 Open up the `dom` project properties:
 
-image::320-datanucleus-project-properties.png[link="320-datanucleus-project-properties.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/320-datanucleus-project-properties.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/320-datanucleus-project-properties.png"]
 
 and specify this persistence unit for the enhancer plugin:
 
-image::330-datanucleus-enhancer.png[link="330-datanucleus-enhancer.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/330-datanucleus-enhancer.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/330-datanucleus-enhancer.png"]
 
 Finally, back on the `dom` project's context menu, enable auto-enhancement:
 
-image::340-datanucleus-auto-enhancement.png[link="340-datanucleus-auto-enhancement.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/340-datanucleus-auto-enhancement.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/340-datanucleus-auto-enhancement.png"]
 
 
 
@@ -278,19 +278,19 @@ image::340-datanucleus-auto-enhancement.png[link="340-datanucleus-auto-enhanceme
 
 Let's take a quick look at the features available in the editor.  To start with, the editor provides context sensitive intellisense:
 
-image::410-editor-intellisense.png[link="410-editor-intellisense.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/410-editor-intellisense.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/410-editor-intellisense.png"]
 
 There's also a quick outline view (`ctrl+O`), great for quick navigation:
 
-image::420-editor-quick-outline.png[link="420-editor-quick-outline.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/420-editor-quick-outline.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/420-editor-quick-outline.png"]
 
 The outline is also available as a view:
 
-image::430-editor-outline-view.png[link="430-editor-outline-view.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/430-editor-outline-view.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/430-editor-outline-view.png"]
 
 Finally, any syntax errors are shown as markers and also in the problem view:
 
-image::440-editor-error-markers.png[link="440-editor-error-markers.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/440-editor-error-markers.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/440-editor-error-markers.png"]
 
 
 
@@ -303,19 +303,19 @@ To run within Eclipse, you'll find that the `webapp/ide/eclipse/launch` director
 
 You can run the app from the context menu of one of these `.launch` files:
 
-image::510-eclipse-run.png[link="510-eclipse-run.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/510-eclipse-run.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/510-eclipse-run.png"]
 
 and the console shows the app starting:
 
-image::520-eclipse-run-console.png[link="520-eclipse-run-console.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/520-eclipse-run-console.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/520-eclipse-run-console.png"]
 
 Browsing to http://localhost:8080/wicket should hit the sign-in page (login `sven/pass`):
 
-image::600-running-app.png[link="600-running-app.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/600-running-app.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/600-running-app.png"]
 
 and you can then use the app as normal:
 
-image::610-running-app-dashboard.png[link="610-running-app-dashboard.png"]
+image::https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/610-running-app-dashboard.png[link="https://raw.githubusercontent.com/isisaddons/isis-app-simpledsl/master/images/610-running-app-dashboard.png"]
 
 
 You can also build and then from the command line.  To build:
@@ -338,7 +338,4 @@ or if you prefer a splash screen:
 ----
 mvn -P self-host antrun:run
 ----
-
-
-
 
